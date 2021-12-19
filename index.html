@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <script src="https://static.spearly.com/js/v2/spearly-cms.browser.js" defer></script>
+  <script>
+    window.addEventListener('DOMContentLoaded',
+      () => {
+        const t = document.querySelectorAll(':not(:defined)');
+        for (const e of t) { e.style.visibility = "hidden"; };
+        window.spearly.config.AUTH_KEY = "sTOGxqs5L4wGWRSzvMbpDpv4RZpqrujcZIKBm3cs3Y4"
+      },
+      { once: true }
+    )
+  </script>
+</head>
+
+<body>
+  <h1>Hello, Spearly</h1>
+  <news-list data-item-page-path="item.html">
+    <h1>{%= news_title %}</h1>
+    <img src="{%= news_image %}" />
+    <div style="background: url('{%= news_image %}');"></div>
+    <p>{%= news_description %}</p>
+  </news-list>
+</body>
+
+</html>
